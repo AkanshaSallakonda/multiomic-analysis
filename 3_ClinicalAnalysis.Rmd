@@ -1,0 +1,12 @@
+---
+title: "Data Download and Clinical Analysis"
+---
+
+```{r}
+# Set working directory
+
+currDir = "/Users/akki/Documents/multiomic-analysis"
+setwd(currDir)
+knitr::opts_knit$set(root.dir = normalizePath(currDir))
+source("packages_loading.R")
+```

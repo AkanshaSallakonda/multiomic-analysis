@@ -1,16 +1,3 @@
----
-title: "Loading Packages"
----
-
-```{r}
-# Set working directory
-
-currDir = "/Users/akki/Documents/tcga-analysis"
-setwd(currDir)
-knitr::opts_knit$set(root.dir = normalizePath(currDir))
-```
-
-```{r}
 # Loading packages
 
 library(BiocManager)
@@ -24,6 +11,3 @@ library(EnhancedVolcano)
 library(limma)
 library(sesame)
 library(data.table)
-
-```
-

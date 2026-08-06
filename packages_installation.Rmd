@@ -1,12 +1,12 @@
 ---
-title: "Package Download - TCGA Analysis"
-output: html_notebook
+title: "Package Download"
 ---
 
 ```{r}
 # Set working directory
 
-currDir = "/Users/akki/Documents/tcga-analysis"
+currDir = "/Users/akki/Documents/multiomic-analysis"
+setwd(currDir)
 knitr::opts_knit$set(root.dir = normalizePath(currDir))
 ```
 
