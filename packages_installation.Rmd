@@ -1,0 +1,63 @@
+---
+title: "Package Download - TCGA Analysis"
+output: html_notebook
+---
+
+```{r}
+# Set working directory
+
+currDir = "/Users/akki/Documents/tcga-analysis"
+knitr::opts_knit$set(root.dir = normalizePath(currDir))
+```
+
+```{r}
+# Download the following packages
+
+# Lets you install bioinformatics packages from the Bioconductor project
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(version = "3.20")
+
+# Package for analysis with TCGA data
+if (!require("TCGAbiolinks", quietly = TRUE))
+  BiocManager::install("TCGAbiolinks")
+
+# Package for analyzing Mutation Annotation Format files
+if (!require("maftools", quietly = TRUE))
+  BiocManager::install("maftools")
+
+# Package for differential expression analysis
+if (!require("DESeq2", quietly = TRUE))
+  BiocManager::install("DESeq2")
+
+# Package for survival analysis (ex. Kaplan-Meier)
+if (!require("survival", quietly = TRUE))
+  install.packages("survival")
+
+# Package for visualizing survival analysis; built on ggplot2
+if (!require("survminer", quietly = TRUE))
+  install.packages("survminer")
+
+# Package for data visualization
+if (!require("ggplot2", quietly = TRUE))
+  install.packages("ggplot2")
+
+# Package for creating volcano plots based on differential expression analysis; built on ggplot2
+if (!require("EnhancedVolcano", quietly = TRUE))
+  BiocManager::install("EnhancedVolcano")
+
+# Package for assessing complex experiments (ex. microarrays, RNA-seq)
+if (!require("limma", quietly = TRUE))
+  BiocManager::install("limma")
+
+# Package for processing methylation data
+if (!require("sesame", quietly = TRUE))
+  BiocManager::install("sesame")
+
+# Package for data manipulation
+if (!require("data.table", quietly = TRUE))
+  install.packages("data.table")
+
+```
+
+
